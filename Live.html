@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<body>
+<script src="jahoot.js"></script>
+<script src="fishing.js"></script>
+<center>
+<h2>Jahoot - Live</h2>
+<textarea rows="20" cols="40" id="edit" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" size="40"></textarea>
+<p><input id="output" readonly="true" style="border:none;" size="40"/></p>
+<script>
+function runCode() {
+    try {
+        document.getElementById("output").style.color = "black";
+        document.getElementById("output").value = "";
+        document.getElementById("output").value = "< "+eval(document.getElementById("edit").value);
+    } catch (error) {
+        document.getElementById("output").style.color = "red";
+        document.getElementById("output").value = "";
+        document.getElementById("output").value = error;
+    }
+}
+</script>
+<p>
+<button onclick="runCode();">Run Code</button>
+</p>
+</center>
+</body>
+</html>

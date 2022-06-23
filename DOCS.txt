@@ -1,0 +1,33 @@
+How to make a quiz:
+ - Randomized style (keeps going on forever):  
+// ---starts---  
+while (true) {  
+    questions = [  
+        jahoot.question.quiz([parameters here]),
+        ... [more questions here]
+    ]
+    eval(questions[Math.floor(Math.random()*[# of questions]-1)]);
+    // You can also use the Fishing Addon and use jahoot.fishing.check(); here
+    // Or, use your own addon's function here.
+}
+// ---ends---
+
+ - Ordered Style (questions only appear once):
+// ---starts---
+jahoot.question.quiz([parameters here]);
+... [more questions here]
+// ---ends---
+
+Remember to replace the [brackets] with actual parameters/strings!
+
+Some more things to remember:
+  - jahoot.vars.score = Score of the player
+  - jahoot.vars.isCorrect = Checks if the player is correct
+  - a1 = answer 1 (A) (Applies to Quiz/Poll/True or False)
+  - a2 = answer 2 (B) (Applies to Quiz/Poll/True or False)
+  - a3 = answer 3 (C) (Applies to Quiz/Poll)
+  - a4 = answer 4 (D) (Applies to Quiz/Poll)
+  - q = question ([question])
+  - cl = correct letter (A, B, C or D)
+  - ca = correct answer to question
+  All parameters must be in strings (quotation marks wrapped around parameters; ex: "What is 1+1?")

@@ -1,0 +1,4 @@
+-----Updates-----
+v1.0.0: No LocalStorage in code! (variables stored in jahoot.vars.[var_here])
+        Made modding compatible (fishing mod included as a sample)
+        Added 4 question types (Quiz/Poll/True or False/Written)
